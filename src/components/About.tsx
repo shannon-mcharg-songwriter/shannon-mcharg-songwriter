@@ -8,7 +8,7 @@ export const About: React.FC = () => {
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/0c27cf0c641e09de51f7e9b0a10eda870eec427d?placeholderIfAbsent=true"
             alt="Sketchy image of Shannon McHarg playing guitar at an open mic"
-            className="w-full max-w-md mx-auto lg:max-w-none lg:mx-0 aspect-[0.75] object-cover rounded-2xl shadow-xl transition-all duration-500 group-hover:shadow-2xl group-hover:scale-[1.02]"
+            className="w-full max-w-md mx-auto lg:max-w-none lg:mx-0 aspect-[0.75] object-cover rounded-2xl shadow-xl"
           />
         </div>
         
@@ -35,6 +35,22 @@ export const About: React.FC = () => {
               Shannon writes quirky, punky, observational songs about
               social issues, politics, and holidays.
             </p>
+            
+            <div className="mt-8 sm:mt-10">
+              <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-center lg:text-left">
+                Influences
+              </h3>
+              <div className="flex flex-wrap gap-2 justify-center lg:justify-start">
+                {['Ani DiFranco', 'Billy Bragg', 'Brandi Carlile', 'Butch Walker', 'Cake', 'The Clash', 'Daniel Johnston', 'Elvis Costello', 'Jill Sobule', 'Kacey Musgraves', 'Liz Phair', 'Margaret Glaspy', 'Patti Smith', 'Pete Yorn', 'PJ Harvey', 'The Replacements', 'Sam Phillips', 'Siouxsie and the Banshees', 'Whim', 'XTC'].map((influence) => (
+                  <span
+                    key={influence}
+                    className="px-3 py-1.5 bg-primary/10 text-foreground rounded-full text-sm font-medium border border-primary/20"
+                  >
+                    {influence}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </article>
       </div>
