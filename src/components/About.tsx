@@ -51,6 +51,29 @@ export const About: React.FC = () => {
                 ))}
               </div>
             </div>
+            
+            <div className="mt-8 sm:mt-10">
+              <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">
+                Collaborators
+              </h3>
+              <p className="text-foreground text-base mb-4 text-left">
+                These are the humans who helped get my music out into the world.
+              </p>
+              <div className="space-y-3">
+                <div className="text-left">
+                  <a href="https://judcaswell.com/" target="_blank" rel="noopener noreferrer" className="font-semibold text-primary hover:text-primary/80 transition-colors underline">Jud Caswell:</a>
+                  <span className="text-foreground ml-2">Production and recording</span>
+                </div>
+                <div className="text-left">
+                  <a href="https://www.facebook.com/CowboyRexyDinosaur" target="_blank" rel="noopener noreferrer" className="font-semibold text-primary hover:text-primary/80 transition-colors underline">Rexy Dinosaur:</a>
+                  <span className="text-foreground ml-2">Bass and percussion</span>
+                </div>
+                <div className="text-left">
+                  <a href="https://chenardvoicestudio.com/" target="_blank" rel="noopener noreferrer" className="font-semibold text-primary hover:text-primary/80 transition-colors underline">Erin Chenard:</a>
+                  <span className="text-foreground ml-2">Vocal coaching</span>
+                </div>
+              </div>
+            </div>
           </div>
         </article>
       </div>
