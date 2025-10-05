@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail } from 'lucide-react';
+import { Mail, Newspaper } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const socialLinks = [
@@ -46,38 +46,56 @@ export const Footer: React.FC = () => {
           </h2>
           
           <nav aria-label="Social media links">
-            <div className="flex items-center justify-center lg:justify-start gap-4 sm:gap-6">
+            <div className="flex items-center justify-center lg:justify-start gap-6 sm:gap-8">
               <a
-                href="mailto:shannonmchargsongwriter@gmail.com"
+                href="https://buttondown.com/shannonmchargsongs"
                 tabIndex={0}
-                className="p-2 sm:p-3 rounded-full bg-accent/30 hover:bg-accent transition-all duration-300 hover:scale-110 group focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-                aria-label="Email Shannon"
+                className="flex flex-col items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg"
+                aria-label="Subscribe to Shannon's newsletter"
                 role="link"
               >
-                <Mail className="w-6 h-6 text-foreground group-hover:scale-110 transition-transform duration-300" />
+                <div className="p-2 sm:p-3 rounded-full bg-accent/30 hover:bg-accent transition-all duration-300 group-hover:scale-110">
+                  <Newspaper className="w-6 h-6 text-foreground group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">Newsletter</span>
               </a>
               {socialLinks.map((link, index) => (
                 <a
                   key={index}
                   href={link.href}
                   tabIndex={0}
-                  className="p-2 sm:p-3 rounded-full bg-accent/30 hover:bg-accent transition-all duration-300 hover:scale-110 group focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                  className="flex flex-col items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg"
                   aria-label={`Follow Shannon on ${link.alt}`}
                   role="link"
                 >
-                  <img
-                    src={link.src}
-                    alt=""
-                    className={`${link.className} object-contain group-hover:scale-110 transition-transform duration-300`}
-                    role="presentation"
-                  />
+                  <div className="p-2 sm:p-3 rounded-full bg-accent/30 hover:bg-accent transition-all duration-300 group-hover:scale-110">
+                    <img
+                      src={link.src}
+                      alt=""
+                      className={`${link.className} object-contain group-hover:scale-110 transition-transform duration-300`}
+                      role="presentation"
+                    />
+                  </div>
+                  <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">{link.alt}</span>
                 </a>
               ))}
+              <a
+                href="mailto:shannonmchargsongwriter@gmail.com"
+                tabIndex={0}
+                className="flex flex-col items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg"
+                aria-label="Email Shannon"
+                role="link"
+              >
+                <div className="p-2 sm:p-3 rounded-full bg-accent/30 hover:bg-accent transition-all duration-300 group-hover:scale-110">
+                  <Mail className="w-6 h-6 text-foreground group-hover:scale-110 transition-transform duration-300" />
+                </div>
+                <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">Email Me</span>
+              </a>
             </div>
           </nav>
           
           <p className="text-muted-foreground text-xs sm:text-sm font-medium">
-            © 2025 Shannon McHarg all rights reserved.
+            © 2025 Shannon McHarg. All rights reserved.
           </p>
         </div>
         
