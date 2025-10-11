@@ -1,30 +1,49 @@
 import React from 'react';
+import bandcampLogo from '@/assets/bandcamp-logo.png';
+import spotifyLogo from '@/assets/spotify-logo.png';
+import appleMusicLogo from '@/assets/apple-music-logo.svg';
+import youtubeLogo from '@/assets/youtube-logo.png';
+import amazonMusicLogo from '@/assets/amazon-music-logo.png';
 
 export const Music: React.FC = () => {
+  const availableNowPlatforms = [
+    {
+      src: bandcampLogo,
+      alt: "Bandcamp platform logo",
+      aspectRatio: "aspect-square",
+      width: "w-[120px]",
+      href: "https://shannonmcharg.bandcamp.com/"
+    }
+  ];
+
   const comingSoonPlatforms = [
     {
-      src: "https://api.builder.io/api/v1/image/assets/TEMP/44321cf19157501330e82958763daee7ebe1a954?placeholderIfAbsent=true",
-      alt: "Bandcamp platform logo",
-      aspectRatio: "aspect-[3.18]",
-      width: "w-[204px]"
-    },
-    {
-      src: "https://api.builder.io/api/v1/image/assets/TEMP/11c2e22f26f83eefc0b55c4824460c9962f09d96?placeholderIfAbsent=true",
+      src: spotifyLogo,
       alt: "Spotify music streaming platform logo", 
-      aspectRatio: "aspect-[3.06]",
-      width: "w-[196px]"
+      aspectRatio: "aspect-square",
+      width: "w-[120px]",
+      name: "Spotify"
     },
     {
-      src: "https://api.builder.io/api/v1/image/assets/TEMP/aec7c2ab6451a33191f8637a15edf07b2ead3853?placeholderIfAbsent=true",
+      src: appleMusicLogo,
       alt: "Apple Music platform logo",
-      aspectRatio: "aspect-[4.61]", 
-      width: "w-[295px]"
+      aspectRatio: "aspect-square", 
+      width: "w-[120px]",
+      name: "Apple Music"
     },
     {
-      src: "https://api.builder.io/api/v1/image/assets/TEMP/8f779beb511c99a6c61a5fc5ae3a42332b2cc49b?placeholderIfAbsent=true",
+      src: amazonMusicLogo,
+      alt: "Amazon Music platform logo",
+      aspectRatio: "aspect-square",
+      width: "w-[120px]",
+      name: "Amazon Music"
+    },
+    {
+      src: youtubeLogo,
       alt: "YouTube music platform logo",
-      aspectRatio: "aspect-[3.31]",
-      width: "w-[212px]"
+      aspectRatio: "aspect-square",
+      width: "w-[120px]",
+      name: "YouTube"
     }
   ];
 
@@ -43,34 +62,85 @@ export const Music: React.FC = () => {
           <div className="absolute -bottom-4 left-1/2 lg:left-0 transform -translate-x-1/2 lg:translate-x-0 w-16 h-1 bg-primary rounded-full"></div>
         </h2>
         
-        <div className="mb-8">
-          <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">
-            Coming Soon to All Online Platforms
+        <div className="mb-12">
+          <h3 className="text-secondary text-2xl sm:text-3xl font-semibold mb-6 text-left">
+            Releases
           </h3>
-          <div className="flex items-center justify-center lg:justify-start gap-4 sm:gap-6 lg:gap-8 flex-wrap opacity-50">
-            {comingSoonPlatforms.map((platform, index) => (
-              <div 
-                key={index} 
-                className="flex-shrink-0 w-32 sm:w-40 lg:w-auto"
-              >
-                <div className="relative overflow-hidden rounded-xl">
-                  <img
-                    src={platform.src}
-                    alt={platform.alt}
-                    className="w-full h-auto object-cover lg:w-auto lg:h-auto"
-                    style={{ 
-                      aspectRatio: platform.aspectRatio.replace('aspect-', '').replace('[', '').replace(']', ''),
-                      maxWidth: platform.width.replace('w-', '').replace('[', '').replace(']', '').replace('px', '') + 'px'
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
+          <div className="flex justify-center lg:justify-start">
+            <iframe 
+              style={{ border: 0, width: '100%', maxWidth: '400px', height: '241px' }} 
+              src="https://bandcamp.com/EmbeddedPlayer/album=543644240/size=large/bgcol=ffffff/linkcol=0687f5/artwork=small/transparent=true/" 
+              seamless
+              title="Plastic Cuppa Fall by Shannon McHarg"
+            >
+              <a href="https://shannonmcharg.bandcamp.com/album/plastic-cuppa-fall">Plastic Cuppa Fall by Shannon McHarg</a>
+            </iframe>
           </div>
         </div>
 
-        <div className="mt-16 sm:mt-20 lg:mt-24">
-          <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">
+        <div className="mb-12">
+          <h3 className="text-secondary text-2xl sm:text-3xl font-semibold mb-6 text-left">
+            Listen Online
+          </h3>
+          
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
+            <div className="mb-8">
+            <h4 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">
+              Available Now
+            </h4>
+            <div className="flex items-center justify-center lg:justify-start gap-4 sm:gap-6 lg:gap-8 flex-wrap">
+              {availableNowPlatforms.map((platform, index) => (
+                <a
+                  key={index}
+                  href={platform.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-2 hover:opacity-80 transition-opacity"
+                >
+                  <div className="relative aspect-square w-8 sm:w-10 lg:w-12 bg-transparent">
+                    <img
+                      src={platform.src}
+                      alt={platform.alt}
+                      className="w-full h-full object-contain bg-transparent"
+                      style={{ backgroundColor: 'transparent' }}
+                    />
+                  </div>
+                  <span className="text-xs text-muted-foreground">Bandcamp</span>
+                </a>
+              ))}
+            </div>
+            </div>
+
+            <div className="mb-8">
+              <h4 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">
+                Coming Soon
+              </h4>
+            <div className="flex items-center justify-center lg:justify-start gap-4 sm:gap-6 lg:gap-8 flex-wrap opacity-50">
+              {comingSoonPlatforms.map((platform, index) => (
+                <div 
+                  key={index} 
+                  className="flex flex-col items-center gap-2"
+                >
+                  <div className="relative aspect-square w-8 sm:w-10 lg:w-12 bg-transparent">
+                    <img
+                      src={platform.src}
+                      alt={platform.alt}
+                      className="w-full h-full object-contain bg-transparent"
+                      style={{ backgroundColor: 'transparent' }}
+                    />
+                  </div>
+                  <span className="text-xs text-muted-foreground">
+                    {platform.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="text-secondary text-2xl sm:text-3xl font-semibold mb-6 text-left">
             Open Mics
           </h3>
           <p className="text-foreground text-base mb-4 text-left">
@@ -78,10 +148,17 @@ export const Music: React.FC = () => {
           </p>
           
           <div className="w-full overflow-hidden rounded-xl shadow-xl bg-background">
+            {/* Calendar view for large screens */}
+            <iframe 
+              src="https://calendar.google.com/calendar/embed?src=9046c3d97084617d290368f2f7c45a98712d14f66d21259292756e559d4812b5%40group.calendar.google.com&ctz=America%2FNew_York&mode=MONTH"
+              className="hidden lg:block w-full h-[600px] border-0"
+              title="Open Mics Calendar - Calendar View"
+            />
+            {/* Agenda view for small/medium screens */}
             <iframe 
               src="https://calendar.google.com/calendar/embed?src=9046c3d97084617d290368f2f7c45a98712d14f66d21259292756e559d4812b5%40group.calendar.google.com&ctz=America%2FNew_York&mode=AGENDA"
-              className="w-full h-[400px] sm:h-[500px] lg:h-[600px] border-0"
-              title="Open Mics Calendar"
+              className="lg:hidden w-full h-[400px] sm:h-[500px] border-0"
+              title="Open Mics Calendar - Agenda View"
             />
           </div>
         </div>
