@@ -1,4 +1,11 @@
 import React from 'react';
+import { Plus, Minus } from 'lucide-react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+} from "@/components/ui/accordion";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
 
 export const About: React.FC = () => {
   return (
@@ -22,19 +29,48 @@ export const About: React.FC = () => {
           </h2>
           
           <div className="text-foreground text-lg sm:text-xl font-normal leading-relaxed tracking-normal space-y-4 sm:space-y-6">
-            <p className="text-left">
-              Shannon McHarg has been writing songs since 2016. Her first guitar
-              teacher convinced her to attend an open mic that he ran. She enjoyed
-              performing and playing covers to hone her skills. After a couple of
-              years playing covers, her regular open mic turned into a
-              songwriter's open mic. She'd written a couple of songs, but the
-              shift in open mic format was a catalyst to dive head first into
-              songwriting.
-            </p>
             <p className="text-base sm:text-lg italic text-muted-foreground border-l-4 border-primary pl-4 sm:pl-6 text-left">
-              Shannon writes quirky, punky, observational songs about
-              social issues, politics, and holidays.
+              "But I don't know how to make real change." Shannon writes folk punk songs to feel, reflect, and find the strength to deal with our crumbling world.
             </p>
+            
+            <p className="text-left">
+              Anchoring complex emotions to everyday cultural references, Shannon McHarg's music invites introspection. There is a quiet rebellion in Shannon's reflective, sometimes humorous, often sociopolitical songs. Her lyrics move through feelings of disillusionment to a push for meaning, connection, and agency.
+            </p>
+            
+            <p className="text-left">
+              Her first set of releases is a series of 6 themed EP collections. The first is <em>Plastic Cuppa Fall</em>, a commentary on performative seasonal joy. The rest of the series will release over the coming months and include <em>Holidaze Pie</em>, <em>Forked</em>, <em>False Choices</em>, <em>Consumed</em>, and <em>Uncoupled</em>.
+            </p>
+            
+            <div className="mt-8 sm:mt-10">
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="full-bio" className="border border-border rounded-lg overflow-hidden">
+                  <AccordionPrimitive.Header className="flex">
+                    <AccordionPrimitive.Trigger 
+                      className="flex items-center gap-3 text-primary hover:text-primary/80 font-semibold text-left py-3 px-4 group w-full bg-muted/30 hover:bg-muted/50 transition-colors"
+                      aria-label="Toggle full biography"
+                    >
+                      <Plus className="h-5 w-5 shrink-0 group-data-[state=open]:hidden" aria-hidden="true" />
+                      <Minus className="h-5 w-5 shrink-0 group-data-[state=closed]:hidden" aria-hidden="true" />
+                      <span>Full bio</span>
+                    </AccordionPrimitive.Trigger>
+                  </AccordionPrimitive.Header>
+                  <AccordionContent className="text-foreground text-base leading-relaxed space-y-4 px-4 pb-4 pt-4 bg-background" role="region" aria-label="Full biography content">
+                    <p className="text-left">
+                      Anchoring complex emotions to everyday cultural references, Shannon McHarg's music invites introspection. There is a quiet rebellion in Shannon's reflective, sometimes humorous, often sociopolitical songs. Her lyrics move through feelings of disillusionment to a push for meaning, connection, and agency.
+                    </p>
+                    <p className="text-left">
+                      Expressing emotions was not part of Shannon's formative years. Now, she writes to process and release emotions. She wants to help others do the same. Her guitar has become a gateway to knowing herself and sharing her discoveries with others.
+                    </p>
+                    <p className="text-left">
+                      By day, she makes tech work for people (formally known as "human-centered design"). This human-centeredness bleeds into her music. Her musical design moves fluidly between the personal and social. It holds space for empathy as a way to "claw back" from feelings of loss and despair.
+                    </p>
+                    <p className="text-left">
+                      As her fans move across her conceptually themed collections — <em>Plastic Cuppa Fall</em>, <em>Holidaze Pie</em>, <em>Forked</em>, <em>False Choices</em>, <em>Consumed</em>, and <em>Uncoupled</em> — they find an exploration that chronicles everything from divorce and media fragmentation to political disillusionment and the search for renewed community.
+                    </p>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
             
             <div className="mt-8 sm:mt-10">
               <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">
