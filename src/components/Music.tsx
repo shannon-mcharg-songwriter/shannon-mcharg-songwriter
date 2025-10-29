@@ -4,6 +4,8 @@ import spotifyLogo from '@/assets/spotify-logo.png';
 import appleMusicLogo from '@/assets/apple-music-logo.svg';
 import youtubeLogo from '@/assets/youtube-logo.png';
 import amazonMusicLogo from '@/assets/amazon-music-logo.png';
+import tidalLogo from '@/assets/tidal-logo.png';
+import pandoraLogo from '@/assets/pandora-logo.png';
 
 export const Music: React.FC = () => {
   const availableNowPlatforms = [
@@ -12,16 +14,15 @@ export const Music: React.FC = () => {
       alt: "Bandcamp platform logo",
       aspectRatio: "aspect-square",
       width: "w-[120px]",
-      href: "https://shannonmcharg.bandcamp.com/"
-    }
-  ];
-
-  const comingSoonPlatforms = [
+      href: "https://shannonmcharg.bandcamp.com/",
+      name: "Bandcamp"
+    },
     {
       src: spotifyLogo,
-      alt: "Spotify music streaming platform logo", 
+      alt: "Spotify music streaming platform logo",
       aspectRatio: "aspect-square",
       width: "w-[120px]",
+      href: "https://open.spotify.com/artist/6JUDGvBQiLagw4rt8Gb9ct?si=BUe2A0UGQYmeuY00msZWhQ",
       name: "Spotify"
     },
     {
@@ -29,6 +30,7 @@ export const Music: React.FC = () => {
       alt: "Apple Music platform logo",
       aspectRatio: "aspect-square", 
       width: "w-[120px]",
+      href: "https://music.apple.com/us/artist/shannon-mcharg/1844698992",
       name: "Apple Music"
     },
     {
@@ -36,6 +38,7 @@ export const Music: React.FC = () => {
       alt: "Amazon Music platform logo",
       aspectRatio: "aspect-square",
       width: "w-[120px]",
+      href: "https://music.amazon.com/artists/B0FV4TVBRB/shannon-mcharg",
       name: "Amazon Music"
     },
     {
@@ -43,7 +46,24 @@ export const Music: React.FC = () => {
       alt: "YouTube music platform logo",
       aspectRatio: "aspect-square",
       width: "w-[120px]",
+      href: "https://music.youtube.com/channel/UCCZrRcE-indAPT6rVBaTDmA?si=GSF_LU_6-LyfdmWh",
       name: "YouTube"
+    },
+    {
+      src: tidalLogo,
+      alt: "Tidal music streaming platform logo",
+      aspectRatio: "aspect-square",
+      width: "w-[120px]",
+      href: "https://tidal.com/artist/67993245",
+      name: "Tidal"
+    },
+    {
+      src: pandoraLogo,
+      alt: "Pandora music streaming platform logo",
+      aspectRatio: "aspect-square",
+      width: "w-[120px]",
+      href: "https://www.pandora.com/artist/shannon-mcharg/ARthXx7797ZX5fK",
+      name: "Pandora"
     }
   ];
 
@@ -85,9 +105,6 @@ export const Music: React.FC = () => {
           
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
             <div className="mb-8">
-            <h4 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">
-              Available Now
-            </h4>
             <div className="flex items-center justify-center lg:justify-start gap-4 sm:gap-6 lg:gap-8 flex-wrap">
               {availableNowPlatforms.map((platform, index) => (
                 <a
@@ -105,34 +122,8 @@ export const Music: React.FC = () => {
                       style={{ backgroundColor: 'transparent' }}
                     />
                   </div>
-                  <span className="text-xs text-muted-foreground">Bandcamp</span>
+                  <span className="text-xs text-muted-foreground">{platform.name}</span>
                 </a>
-              ))}
-            </div>
-            </div>
-
-            <div className="mb-8">
-              <h4 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">
-                Coming Soon
-              </h4>
-            <div className="flex items-center justify-center lg:justify-start gap-4 sm:gap-6 lg:gap-8 flex-wrap opacity-50">
-              {comingSoonPlatforms.map((platform, index) => (
-                <div 
-                  key={index} 
-                  className="flex flex-col items-center gap-2"
-                >
-                  <div className="relative aspect-square w-8 sm:w-10 lg:w-12 bg-transparent">
-                    <img
-                      src={platform.src}
-                      alt={platform.alt}
-                      className="w-full h-full object-contain bg-transparent"
-                      style={{ backgroundColor: 'transparent' }}
-                    />
-                  </div>
-                  <span className="text-xs text-muted-foreground">
-                    {platform.name}
-                  </span>
-                </div>
               ))}
             </div>
             </div>
