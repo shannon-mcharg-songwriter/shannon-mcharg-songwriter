@@ -17,26 +17,94 @@ const Index = () => {
       { id: 'connect', name: 'Connect' }
     ];
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const section = sections.find(s => s.id === entry.target.id);
-            if (section) {
-              setActiveSection(section.name);
-            }
+    // Helpers for consistent header-aware scrolling
+    const getHeaderOffset = () => {
+      const headerEl = document.querySelector('header');
+      const headerHeight = headerEl ? (headerEl as HTMLElement).offsetHeight : 80;
+      // Add small spacing so H2 is fully visible below shadow
+      return headerHeight + 16;
+    };
+
+    let isProgrammaticScroll = false;
+
+    const handleScroll = () => {
+      if (isProgrammaticScroll) return;
+
+      const headerOffset = getHeaderOffset();
+      const scrollPosition = window.scrollY + headerOffset;
+      
+      // Check if we're at the bottom of the page
+      const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 50;
+      
+      if (isAtBottom) {
+        // Always highlight the last section when at bottom
+        setActiveSection('Connect');
+        return;
+      }
+
+      // Find which section is currently in view
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i];
+        const element = document.getElementById(section.id);
+        
+        if (element) {
+          const offsetTop = element.offsetTop;
+          
+          if (scrollPosition >= offsetTop) {
+            setActiveSection(section.name);
+            break;
           }
-        });
-      },
-      { threshold: 0.3, rootMargin: '-80px 0px -50% 0px' }
-    );
+        }
+      }
+    };
 
-    sections.forEach(({ id }) => {
-      const element = document.getElementById(id);
-      if (element) observer.observe(element);
-    });
+    // Initial check
+    handleScroll();
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
-    return () => observer.disconnect();
+    // Handle smooth scroll with offset for sticky header
+    const handleNavClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const link = target.closest('a[href^="#"]') as HTMLAnchorElement | null;
+      if (!link) return;
+      e.preventDefault();
+      const href = link.getAttribute('href');
+      if (!href) return;
+
+      const targetId = href.substring(1);
+      const targetElement = document.getElementById(targetId);
+      if (!targetElement) return;
+
+      // Immediately update active section on click
+      const section = sections.find(s => s.id === targetId);
+      if (section) {
+        setActiveSection(section.name);
+      }
+
+      isProgrammaticScroll = true;
+      const headerOffset = getHeaderOffset();
+      const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - headerOffset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+
+      // Re-enable scroll detection after animation completes
+      window.setTimeout(() => {
+        isProgrammaticScroll = false;
+        handleScroll();
+      }, 600);
+    };
+
+    document.addEventListener('click', handleNavClick);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('click', handleNavClick);
+    };
   }, []);
 
   return (
