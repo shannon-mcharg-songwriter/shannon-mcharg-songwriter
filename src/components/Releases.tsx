@@ -80,19 +80,19 @@ export const Releases: React.FC = () => {
   return (
     <section 
       id="releases" 
-      className="bg-background py-8 sm:py-12 lg:py-12 px-4 sm:px-6 lg:px-8"
+      className="bg-background py-4 sm:py-6 lg:py-8 pb-6 sm:pb-8 lg:pb-10 px-4 sm:px-6 lg:px-8"
       aria-labelledby="releases-heading"
     >
       <div className="max-w-7xl mx-auto">
         <h2 
           id="releases-heading"
-          className="text-secondary text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight mb-8 sm:mb-12 lg:mb-16 relative text-left"
+          className="text-secondary text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight mb-6 sm:mb-8 lg:mb-10 relative text-left"
         >
           Music
           <div className="absolute -bottom-4 left-0 w-16 h-1 bg-primary rounded-full"></div>
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-0">
           <Card className="border border-border shadow-sm">
             <CardContent className="p-6">
               <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">Stream My Music</h3>
@@ -149,7 +149,7 @@ export const Releases: React.FC = () => {
                 loading="lazy"
                 title="Holidaze Pie by Shannon McHarg - Pre-save"
               />
-              <div className="flex items-center gap-4 mt-3">
+              <div className="flex flex-col gap-2 mt-3">
                 <a
                   href="https://www.musixmatch.com/album/Shannon-McHarg/Holidaze-Pie-EP"
                   target="_blank"
@@ -181,7 +181,7 @@ export const Releases: React.FC = () => {
                 loading="lazy"
                 title="Plastic Cuppa Fall by Shannon McHarg"
               />
-              <div className="flex items-center gap-4 mt-3">
+              <div className="flex flex-col gap-2 mt-3">
                 <a
                   href="https://www.musixmatch.com/album/Shannon-McHarg/Plastic-Cuppa-Fall-Single"
                   target="_blank"

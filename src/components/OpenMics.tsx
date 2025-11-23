@@ -4,7 +4,7 @@ export const OpenMics: React.FC = () => {
   return (
     <section 
       id="open-mics" 
-      className="bg-background py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8"
+      className="bg-background py-4 sm:py-6 lg:py-8 pb-8 sm:pb-10 lg:pb-12 px-4 sm:px-6 lg:px-8"
       aria-labelledby="open-mics-heading"
     >
       <div className="max-w-7xl mx-auto">
@@ -17,7 +17,7 @@ export const OpenMics: React.FC = () => {
         </h2>
         
         <p className="text-foreground text-base mb-4 text-left">
-          This is where you can see me play.
+          Where you can see me play.
         </p>
         
         <div className="w-full overflow-hidden rounded-xl shadow-xl bg-background">
