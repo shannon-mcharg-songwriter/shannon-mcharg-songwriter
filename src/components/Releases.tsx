@@ -139,7 +139,6 @@ export const Releases: React.FC = () => {
           <Card className="border border-border shadow-sm" style={{ backgroundColor: '#34545B' }}>
             <CardContent className="p-6">
               <h3 className="text-white text-xl sm:text-2xl font-semibold mb-4 text-left">Forked</h3>
-              <p className="text-white text-sm mb-4">Releasing January 2! Pre-save now on Spotify.</p>
               <div className="flex justify-center">
                 <iframe
                   src="https://show.co/social-unlock/7GwpUDGne8qEwx0oWq9CBw/widget"
@@ -148,6 +147,21 @@ export const Releases: React.FC = () => {
                   frameBorder="0"
                   title="Pre-save Forked on Spotify"
                 />
+              </div>
+              <div className="flex flex-col gap-2 mt-3">
+                <a
+                  href="https://www.musixmatch.com/album/Shannon-McHarg-1/Forked"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline decoration-white"
+                >
+                  <img
+                    src={musixmatchLogo}
+                    alt="Musixmatch logo"
+                    className="w-6 h-6 object-contain brightness-0 invert"
+                  />
+                  <span className="text-white text-sm font-medium">Forked lyrics</span>
+                </a>
               </div>
             </CardContent>
           </Card>
