@@ -109,7 +109,7 @@ export const Releases: React.FC = () => {
             </CardContent>
           </Card>
 
-          <Card className="border border-border shadow-sm" style={{ backgroundColor: '#34545B' }}>
+          <Card className="border border-border shadow-sm" style={{ backgroundColor: '#385A61' }}>
             <CardContent className="p-6">
               <h3 className="text-white text-xl sm:text-2xl font-semibold mb-4 text-left">Forked</h3>
               <iframe
@@ -148,7 +148,7 @@ export const Releases: React.FC = () => {
             </CardContent>
           </Card>
 
-          <Card className="border border-border shadow-sm" style={{ backgroundColor: '#981D17' }}>
+          <Card className="border border-border shadow-sm" style={{ backgroundColor: '#8C233F' }}>
             <CardContent className="p-6">
               <h3 className="text-white text-xl sm:text-2xl font-semibold mb-4 text-left">Holidaze Pie</h3>
               <iframe
@@ -187,7 +187,7 @@ export const Releases: React.FC = () => {
             </CardContent>
           </Card>
 
-          <Card className="border border-border shadow-sm" style={{ backgroundColor: '#8D3500' }}>
+          <Card className="border border-border shadow-sm" style={{ backgroundColor: '#C14E0B' }}>
             <CardContent className="p-6">
               <h3 className="text-white text-xl sm:text-2xl font-semibold mb-4 text-left">Plastic Cuppa Fall</h3>
               <iframe
