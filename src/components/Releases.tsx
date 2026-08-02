@@ -107,9 +107,10 @@ export const Releases: React.FC = () => {
               <iframe
                 data-testid="embed-iframe"
                 style={{ border: 0, width: '100%', height: '654px' }}
-                src="https://bandcamp.com/EmbeddedPlayer/album=128905846/size=large/bgcol=ffffff/linkcol=0A5176/transparent=true/"
-                seamless
-                title="Consumed by Shannon McHarg on Bandcamp"
+                src="https://open.spotify.com/embed/album/4v5oatFkTHBGJ5GLkLHDGC?utm_source=generator"
+                loading="lazy"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                title="Consumed by Shannon McHarg on Spotify"
               >
                 <a href="https://shannonmcharg.bandcamp.com/album/consumed">Consumed by Shannon McHarg</a>
               </iframe>
@@ -133,9 +134,10 @@ export const Releases: React.FC = () => {
               <iframe
                 data-testid="embed-iframe"
                 style={{ border: 0, width: '100%', height: '654px' }}
-                src="https://bandcamp.com/EmbeddedPlayer/album=654472520/size=large/bgcol=ffffff/linkcol=0A5176/transparent=true/"
-                seamless
-                title="False Choices by Shannon McHarg on Bandcamp"
+                src="https://open.spotify.com/embed/album/148X2H2K9zz1p237Oj9FiH?utm_source=generator"
+                loading="lazy"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                title="False Choices by Shannon McHarg on Spotify"
               >
                 <a href="https://shannonmcharg.bandcamp.com/album/false-choices">False Choices by Shannon McHarg</a>
               </iframe>
@@ -172,9 +174,10 @@ export const Releases: React.FC = () => {
               <iframe
                 data-testid="embed-iframe"
                 style={{ border: 0, width: '100%', height: '654px' }}
-                src="https://bandcamp.com/EmbeddedPlayer/album=3690206770/size=large/bgcol=ffffff/linkcol=0A5176/transparent=true/"
-                seamless
-                title="Forked by Shannon McHarg on Bandcamp"
+                src="https://open.spotify.com/embed/album/4BY25qKPO4IvpJQNJBZSbt?utm_source=generator"
+                loading="lazy"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                title="Forked by Shannon McHarg on Spotify"
               >
                 <a href="https://shannonmcharg.bandcamp.com/album/forked">Forked by Shannon McHarg</a>
               </iframe>
@@ -211,9 +214,10 @@ export const Releases: React.FC = () => {
               <iframe
                 data-testid="embed-iframe"
                 style={{ border: 0, width: '100%', height: '650px' }}
-                src="https://bandcamp.com/EmbeddedPlayer/album=510068802/size=large/bgcol=ffffff/linkcol=0A5176/transparent=true/"
-                seamless
-                title="Holidaze Pie by Shannon McHarg on Bandcamp"
+                src="https://open.spotify.com/embed/album/7ii95Ab1L61yEfAw52cIwL?utm_source=generator"
+                loading="lazy"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                title="Holidaze Pie by Shannon McHarg on Spotify"
               >
                 <a href="https://shannonmcharg.bandcamp.com/album/holidaze-pie">Holidaze Pie by Shannon McHarg</a>
               </iframe>
@@ -250,9 +254,10 @@ export const Releases: React.FC = () => {
               <iframe
                 data-testid="embed-iframe"
                 style={{ border: 0, width: '100%', height: '650px' }}
-                src="https://bandcamp.com/EmbeddedPlayer/album=543644240/size=large/bgcol=ffffff/linkcol=0A5176/transparent=true/"
-                seamless
-                title="Plastic Cuppa Fall by Shannon McHarg on Bandcamp"
+                src="https://open.spotify.com/embed/album/56DFiwDg7cMfJS3kSk1eBg?utm_source=generator"
+                loading="lazy"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                title="Plastic Cuppa Fall by Shannon McHarg on Spotify"
               >
                 <a href="https://shannonmcharg.bandcamp.com/album/plastic-cuppa-fall">Plastic Cuppa Fall by Shannon McHarg</a>
               </iframe>
