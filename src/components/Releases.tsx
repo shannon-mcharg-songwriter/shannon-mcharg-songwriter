@@ -112,7 +112,7 @@ export const Releases: React.FC = () => {
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 title="Consumed by Shannon McHarg on Spotify"
               >
-                <a href="https://shannonmcharg.bandcamp.com/album/consumed">Consumed by Shannon McHarg</a>
+                <a href="https://open.spotify.com/album/4v5oatFkTHBGJ5GLkLHDGC">Consumed by Shannon McHarg</a>
               </iframe>
               <div className="flex flex-col gap-2 mt-3">
                 <a
@@ -139,7 +139,7 @@ export const Releases: React.FC = () => {
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 title="False Choices by Shannon McHarg on Spotify"
               >
-                <a href="https://shannonmcharg.bandcamp.com/album/false-choices">False Choices by Shannon McHarg</a>
+                <a href="https://open.spotify.com/album/148X2H2K9zz1p237Oj9FiH">False Choices by Shannon McHarg</a>
               </iframe>
               <div className="flex flex-col gap-2 mt-3">
                 <a
@@ -179,7 +179,7 @@ export const Releases: React.FC = () => {
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 title="Forked by Shannon McHarg on Spotify"
               >
-                <a href="https://shannonmcharg.bandcamp.com/album/forked">Forked by Shannon McHarg</a>
+                <a href="https://open.spotify.com/album/4BY25qKPO4IvpJQNJBZSbt">Forked by Shannon McHarg</a>
               </iframe>
               <div className="flex flex-col gap-2 mt-3">
                 <a
@@ -219,7 +219,7 @@ export const Releases: React.FC = () => {
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 title="Holidaze Pie by Shannon McHarg on Spotify"
               >
-                <a href="https://shannonmcharg.bandcamp.com/album/holidaze-pie">Holidaze Pie by Shannon McHarg</a>
+                <a href="https://open.spotify.com/album/7ii95Ab1L61yEfAw52cIwL">Holidaze Pie by Shannon McHarg</a>
               </iframe>
               <div className="flex flex-col gap-2 mt-3">
                 <a
@@ -259,7 +259,7 @@ export const Releases: React.FC = () => {
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 title="Plastic Cuppa Fall by Shannon McHarg on Spotify"
               >
-                <a href="https://shannonmcharg.bandcamp.com/album/plastic-cuppa-fall">Plastic Cuppa Fall by Shannon McHarg</a>
+                <a href="https://open.spotify.com/album/56DFiwDg7cMfJS3kSk1eBg">Plastic Cuppa Fall by Shannon McHarg</a>
               </iframe>
               <div className="flex flex-col gap-2 mt-3">
                 <a
