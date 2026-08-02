@@ -101,9 +101,9 @@ export const Releases: React.FC = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-0">
-          <Card className="border border-border shadow-sm" style={{ backgroundColor: '#075F4F' }}>
+          <Card className="border border-border shadow-sm">
             <CardContent className="p-6">
-              <h3 className="text-white text-xl sm:text-2xl font-semibold mb-4 text-left">Consumed</h3>
+              <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">Consumed</h3>
               <iframe
                 data-testid="embed-iframe"
                 style={{ border: 0, width: '100%', height: '352px' }}
@@ -119,18 +119,18 @@ export const Releases: React.FC = () => {
                   href="https://www.youtube.com/playlist?list=PLgEDGGuOvK-nok7dkRCoQn04F7TzMd9fA"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline decoration-white"
+                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline"
                 >
-                  <Youtube className="w-6 h-6 text-white" />
-                  <span className="text-white text-sm font-medium">Consumed videos</span>
+                  <Youtube className="w-6 h-6 text-foreground" />
+                  <span className="text-foreground text-sm font-medium">Consumed videos</span>
                 </a>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="border border-border shadow-sm" style={{ backgroundColor: '#1E7AB3' }}>
+          <Card className="border border-border shadow-sm">
             <CardContent className="p-6">
-              <h3 className="text-white text-xl sm:text-2xl font-semibold mb-4 text-left">False Choices</h3>
+              <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">False Choices</h3>
               <iframe
                 data-testid="embed-iframe"
                 style={{ border: 0, width: '100%', height: '352px' }}
@@ -146,31 +146,31 @@ export const Releases: React.FC = () => {
                   href="https://www.musixmatch.com/album/Shannon-McHarg-4/False-Choices"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline decoration-white"
+                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline"
                 >
                   <img
                     src={musixmatchLogo}
                     alt="Musixmatch logo"
-                    className="w-6 h-6 object-contain brightness-0 invert"
+                    className="w-6 h-6 object-contain brightness-0"
                   />
-                  <span className="text-white text-sm font-medium">False Choices lyrics</span>
+                  <span className="text-foreground text-sm font-medium">False Choices lyrics</span>
                 </a>
                 <a
                   href="https://www.youtube.com/playlist?list=PLgEDGGuOvK-moJ1Q3keeS7EcaO37Q_lmb"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline decoration-white"
+                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline"
                 >
-                  <Youtube className="w-6 h-6 text-white" />
-                  <span className="text-white text-sm font-medium">False Choices videos</span>
+                  <Youtube className="w-6 h-6 text-foreground" />
+                  <span className="text-foreground text-sm font-medium">False Choices videos</span>
                 </a>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="border border-border shadow-sm" style={{ backgroundColor: '#385A61' }}>
+          <Card className="border border-border shadow-sm">
             <CardContent className="p-6">
-              <h3 className="text-white text-xl sm:text-2xl font-semibold mb-4 text-left">Forked</h3>
+              <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">Forked</h3>
               <iframe
                 data-testid="embed-iframe"
                 style={{ border: 0, width: '100%', height: '352px' }}
@@ -186,31 +186,31 @@ export const Releases: React.FC = () => {
                   href="https://www.musixmatch.com/album/Shannon-McHarg-1/Forked"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline decoration-white"
+                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline"
                 >
                   <img
                     src={musixmatchLogo}
                     alt="Musixmatch logo"
-                    className="w-6 h-6 object-contain brightness-0 invert"
+                    className="w-6 h-6 object-contain brightness-0"
                   />
-                  <span className="text-white text-sm font-medium">Forked lyrics</span>
+                  <span className="text-foreground text-sm font-medium">Forked lyrics</span>
                 </a>
                 <a
                   href="https://www.youtube.com/playlist?list=PLgEDGGuOvK-kuLUlidVartJ174vCngh6r"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline decoration-white"
+                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline"
                 >
-                  <Youtube className="w-6 h-6 text-white" />
-                  <span className="text-white text-sm font-medium">Forked videos</span>
+                  <Youtube className="w-6 h-6 text-foreground" />
+                  <span className="text-foreground text-sm font-medium">Forked videos</span>
                 </a>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="border border-border shadow-sm" style={{ backgroundColor: '#8C233F' }}>
+          <Card className="border border-border shadow-sm">
             <CardContent className="p-6">
-              <h3 className="text-white text-xl sm:text-2xl font-semibold mb-4 text-left">Holidaze Pie</h3>
+              <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">Holidaze Pie</h3>
               <iframe
                 data-testid="embed-iframe"
                 style={{ border: 0, width: '100%', height: '352px' }}
@@ -226,31 +226,31 @@ export const Releases: React.FC = () => {
                   href="https://www.musixmatch.com/album/Shannon-McHarg/Holidaze-Pie-EP"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline decoration-white"
+                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline"
                 >
                   <img
                     src={musixmatchLogo}
                     alt="Musixmatch logo"
-                    className="w-6 h-6 object-contain brightness-0 invert"
+                    className="w-6 h-6 object-contain brightness-0"
                   />
-                  <span className="text-white text-sm font-medium">Holidaze Pie lyrics</span>
+                  <span className="text-foreground text-sm font-medium">Holidaze Pie lyrics</span>
                 </a>
                 <a
                   href="https://www.youtube.com/playlist?list=PLgEDGGuOvK-kZdEqWSE86048ZxWvCJzYf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline decoration-white"
+                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline"
                 >
-                  <Youtube className="w-6 h-6 text-white" />
-                  <span className="text-white text-sm font-medium">Holidaze Pie videos</span>
+                  <Youtube className="w-6 h-6 text-foreground" />
+                  <span className="text-foreground text-sm font-medium">Holidaze Pie videos</span>
                 </a>
               </div>
             </CardContent>
           </Card>
 
-          <Card className="border border-border shadow-sm" style={{ backgroundColor: '#C14E0B' }}>
+          <Card className="border border-border shadow-sm">
             <CardContent className="p-6">
-              <h3 className="text-white text-xl sm:text-2xl font-semibold mb-4 text-left">Plastic Cuppa Fall</h3>
+              <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">Plastic Cuppa Fall</h3>
               <iframe
                 data-testid="embed-iframe"
                 style={{ border: 0, width: '100%', height: '352px' }}
@@ -266,23 +266,23 @@ export const Releases: React.FC = () => {
                   href="https://www.musixmatch.com/album/Shannon-McHarg/Plastic-Cuppa-Fall-Single"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline decoration-white"
+                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline"
                 >
                   <img
                     src={musixmatchLogo}
                     alt="Musixmatch logo"
-                    className="w-6 h-6 object-contain brightness-0 invert"
+                    className="w-6 h-6 object-contain brightness-0"
                   />
-                  <span className="text-white text-sm font-medium">Plastic Cuppa Fall lyrics</span>
+                  <span className="text-foreground text-sm font-medium">Plastic Cuppa Fall lyrics</span>
                 </a>
                 <a
                   href="https://www.youtube.com/playlist?list=PLgEDGGuOvK-naIiuRdTXk00-nZfz22J-Y"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline decoration-white"
+                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline"
                 >
-                  <Youtube className="w-6 h-6 text-white" />
-                  <span className="text-white text-sm font-medium">Plastic Cuppa Fall videos</span>
+                  <Youtube className="w-6 h-6 text-foreground" />
+                  <span className="text-foreground text-sm font-medium">Plastic Cuppa Fall videos</span>
                 </a>
               </div>
             </CardContent>
