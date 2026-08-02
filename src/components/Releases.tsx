@@ -106,7 +106,7 @@ export const Releases: React.FC = () => {
               <h3 className="text-white text-xl sm:text-2xl font-semibold mb-4 text-left">Consumed</h3>
               <iframe
                 data-testid="embed-iframe"
-                style={{ border: 0, width: '100%', height: '654px' }}
+                style={{ border: 0, width: '100%', height: '352px' }}
                 src="https://open.spotify.com/embed/album/4v5oatFkTHBGJ5GLkLHDGC?utm_source=generator"
                 loading="lazy"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -133,7 +133,7 @@ export const Releases: React.FC = () => {
               <h3 className="text-white text-xl sm:text-2xl font-semibold mb-4 text-left">False Choices</h3>
               <iframe
                 data-testid="embed-iframe"
-                style={{ border: 0, width: '100%', height: '654px' }}
+                style={{ border: 0, width: '100%', height: '352px' }}
                 src="https://open.spotify.com/embed/album/148X2H2K9zz1p237Oj9FiH?utm_source=generator"
                 loading="lazy"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -173,7 +173,7 @@ export const Releases: React.FC = () => {
               <h3 className="text-white text-xl sm:text-2xl font-semibold mb-4 text-left">Forked</h3>
               <iframe
                 data-testid="embed-iframe"
-                style={{ border: 0, width: '100%', height: '654px' }}
+                style={{ border: 0, width: '100%', height: '352px' }}
                 src="https://open.spotify.com/embed/album/4BY25qKPO4IvpJQNJBZSbt?utm_source=generator"
                 loading="lazy"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -213,7 +213,7 @@ export const Releases: React.FC = () => {
               <h3 className="text-white text-xl sm:text-2xl font-semibold mb-4 text-left">Holidaze Pie</h3>
               <iframe
                 data-testid="embed-iframe"
-                style={{ border: 0, width: '100%', height: '650px' }}
+                style={{ border: 0, width: '100%', height: '352px' }}
                 src="https://open.spotify.com/embed/album/7ii95Ab1L61yEfAw52cIwL?utm_source=generator"
                 loading="lazy"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
@@ -253,7 +253,7 @@ export const Releases: React.FC = () => {
               <h3 className="text-white text-xl sm:text-2xl font-semibold mb-4 text-left">Plastic Cuppa Fall</h3>
               <iframe
                 data-testid="embed-iframe"
-                style={{ border: 0, width: '100%', height: '650px' }}
+                style={{ border: 0, width: '100%', height: '352px' }}
                 src="https://open.spotify.com/embed/album/56DFiwDg7cMfJS3kSk1eBg?utm_source=generator"
                 loading="lazy"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
