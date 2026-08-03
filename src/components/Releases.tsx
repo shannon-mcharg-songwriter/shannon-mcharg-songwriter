@@ -85,6 +85,51 @@ export const Releases: React.FC = () => {
     }
   ];
 
+  const connectLinks = [
+    {
+      href: "https://buttondown.com/shannonmchargsongs",
+      label: "Newsletter",
+      icon: <Newspaper className="w-full h-full text-foreground" />,
+      ariaLabel: "Subscribe to Shannon's newsletter"
+    },
+    {
+      href: "https://www.instagram.com/shannonmchargsongs/",
+      label: "Instagram",
+      icon: <img src="https://api.builder.io/api/v1/image/assets/TEMP/de92c4b0cf657c343fd805205fc6bc6a90761783?placeholderIfAbsent=true" alt="" className="w-full h-full object-contain" role="presentation" />,
+      ariaLabel: "Follow Shannon on Instagram"
+    },
+    {
+      href: "https://www.tiktok.com/@shannonmchargsongs",
+      label: "TikTok",
+      icon: <img src="https://api.builder.io/api/v1/image/assets/TEMP/7c7882428c644b092335250bd4a53dfd25e3453a?placeholderIfAbsent=true" alt="" className="w-full h-full object-contain" role="presentation" />,
+      ariaLabel: "Follow Shannon on TikTok"
+    },
+    {
+      href: "https://www.youtube.com/@shannonmchargsongs",
+      label: "YouTube",
+      icon: <img src={youtubeLogo} alt="" className="w-full h-full object-contain" role="presentation" />,
+      ariaLabel: "Follow Shannon on YouTube"
+    },
+    {
+      href: "https://bsky.app/profile/shannonmchargsongs.bsky.social",
+      label: "Bluesky",
+      icon: <img src="https://api.builder.io/api/v1/image/assets/TEMP/a21a4a86570f9f064e8dd8b720171af437391f9c?placeholderIfAbsent=true" alt="" className="w-full h-full object-contain" role="presentation" />,
+      ariaLabel: "Follow Shannon on Bluesky"
+    },
+    {
+      href: "https://www.facebook.com/shannonmchargsongs",
+      label: "Facebook",
+      icon: <img src="https://api.builder.io/api/v1/image/assets/TEMP/f38b20d9602b2855e512dd211e924120bf18c9ef?placeholderIfAbsent=true" alt="" className="w-full h-full object-contain" role="presentation" />,
+      ariaLabel: "Follow Shannon on Facebook"
+    },
+    {
+      href: "mailto:shannonmchargsongwriter@gmail.com",
+      label: "Email Me",
+      icon: <Mail className="w-full h-full text-foreground" />,
+      ariaLabel: "Email Shannon"
+    }
+  ];
+
   return (
     <section 
       id="releases" 
