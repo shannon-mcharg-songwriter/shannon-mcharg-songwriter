@@ -1,5 +1,5 @@
 import React from 'react';
-import { Youtube } from 'lucide-react';
+import { Youtube, Mail, Newspaper } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import musixmatchLogo from '@/assets/musixmatch-logo.png';
 import bandcampLogo from '@/assets/bandcamp-logo.png';
@@ -85,6 +85,51 @@ export const Releases: React.FC = () => {
     }
   ];
 
+  const connectLinks = [
+    {
+      href: "https://buttondown.com/shannonmchargsongs",
+      label: "Newsletter",
+      icon: <Newspaper className="w-full h-full text-foreground" />,
+      ariaLabel: "Subscribe to Shannon's newsletter"
+    },
+    {
+      href: "https://www.instagram.com/shannonmchargsongs/",
+      label: "Instagram",
+      icon: <img src="https://api.builder.io/api/v1/image/assets/TEMP/de92c4b0cf657c343fd805205fc6bc6a90761783?placeholderIfAbsent=true" alt="" className="w-full h-full object-contain" role="presentation" />,
+      ariaLabel: "Follow Shannon on Instagram"
+    },
+    {
+      href: "https://www.tiktok.com/@shannonmchargsongs",
+      label: "TikTok",
+      icon: <img src="https://api.builder.io/api/v1/image/assets/TEMP/7c7882428c644b092335250bd4a53dfd25e3453a?placeholderIfAbsent=true" alt="" className="w-full h-full object-contain" role="presentation" />,
+      ariaLabel: "Follow Shannon on TikTok"
+    },
+    {
+      href: "https://www.youtube.com/@shannonmchargsongs",
+      label: "YouTube",
+      icon: <img src={youtubeLogo} alt="" className="w-full h-full object-contain" role="presentation" />,
+      ariaLabel: "Follow Shannon on YouTube"
+    },
+    {
+      href: "https://bsky.app/profile/shannonmchargsongs.bsky.social",
+      label: "Bluesky",
+      icon: <img src="https://api.builder.io/api/v1/image/assets/TEMP/a21a4a86570f9f064e8dd8b720171af437391f9c?placeholderIfAbsent=true" alt="" className="w-full h-full object-contain" role="presentation" />,
+      ariaLabel: "Follow Shannon on Bluesky"
+    },
+    {
+      href: "https://www.facebook.com/shannonmchargsongs",
+      label: "Facebook",
+      icon: <img src="https://api.builder.io/api/v1/image/assets/TEMP/f38b20d9602b2855e512dd211e924120bf18c9ef?placeholderIfAbsent=true" alt="" className="w-full h-full object-contain" role="presentation" />,
+      ariaLabel: "Follow Shannon on Facebook"
+    },
+    {
+      href: "mailto:shannonmchargsongwriter@gmail.com",
+      label: "Email Me",
+      icon: <Mail className="w-full h-full text-foreground" />,
+      ariaLabel: "Email Shannon"
+    }
+  ];
+
   return (
     <section 
       id="releases" 
@@ -115,6 +160,19 @@ export const Releases: React.FC = () => {
                 <a href="https://open.spotify.com/album/4v5oatFkTHBGJ5GLkLHDGC">Consumed by Shannon McHarg</a>
               </iframe>
               <div className="flex flex-col gap-2 mt-3">
+                <a
+                  href="https://www.musixmatch.com/album/Shannon-McHarg-8/Consumed"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline"
+                >
+                  <img
+                    src={musixmatchLogo}
+                    alt="Musixmatch logo"
+                    className="w-6 h-6 object-contain brightness-0"
+                  />
+                  <span className="text-foreground text-sm font-medium">Consumed lyrics</span>
+                </a>
                 <a
                   href="https://www.youtube.com/playlist?list=PLgEDGGuOvK-nok7dkRCoQn04F7TzMd9fA"
                   target="_blank"
@@ -344,6 +402,31 @@ export const Releases: React.FC = () => {
                   Full list of platforms
                 </a>
               </p>
+            </CardContent>
+          </Card>
+
+          <Card className="border border-border shadow-sm">
+            <CardContent className="p-6">
+              <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">Connect</h3>
+              <nav aria-label="Social media links">
+                <div className="flex flex-col gap-3">
+                  {connectLinks.map((link, index) => (
+                    <a
+                      key={index}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={link.ariaLabel}
+                      className="flex items-center gap-3 underline hover:opacity-80 transition-opacity"
+                    >
+                      <div className="relative aspect-square w-6 h-6 bg-transparent flex-shrink-0">
+                        {link.icon}
+                      </div>
+                      <span className="text-sm text-foreground">{link.label}</span>
+                    </a>
+                  ))}
+                </div>
+              </nav>
             </CardContent>
           </Card>
         </div>

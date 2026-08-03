@@ -3,7 +3,6 @@ import { Header } from '@/components/Header';
 import { Releases } from '@/components/Releases';
 import { About } from '@/components/About';
 import { OpenMics } from '@/components/OpenMics';
-import { Connect } from '@/components/Connect';
 import { Footer } from '@/components/Footer';
 
 const Index = () => {
@@ -13,8 +12,7 @@ const Index = () => {
     const sections = [
       { id: 'releases', name: 'Music' },
       { id: 'about', name: 'About' },
-      { id: 'open-mics', name: 'Open Mics' },
-      { id: 'connect', name: 'Connect' }
+      { id: 'open-mics', name: 'Open Mics' }
     ];
 
     // Helpers for consistent header-aware scrolling
@@ -38,7 +36,7 @@ const Index = () => {
       
       if (isAtBottom) {
         // Always highlight the last section when at bottom
-        setActiveSection('Connect');
+        setActiveSection('Open Mics');
         return;
       }
 
@@ -114,7 +112,6 @@ const Index = () => {
         <Releases />
         <About />
         <OpenMics />
-        <Connect />
       </main>
       <Footer />
     </div>
