@@ -1,5 +1,5 @@
 import React from 'react';
-import { Youtube } from 'lucide-react';
+import { Youtube, Mail, Newspaper } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import musixmatchLogo from '@/assets/musixmatch-logo.png';
 import bandcampLogo from '@/assets/bandcamp-logo.png';
@@ -357,6 +357,125 @@ export const Releases: React.FC = () => {
                   Full list of platforms
                 </a>
               </p>
+            </CardContent>
+          </Card>
+
+          <Card className="border border-border shadow-sm">
+            <CardContent className="p-6">
+              <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">Connect</h3>
+              <nav aria-label="Social media links">
+                <div className="flex flex-wrap items-center justify-start gap-4 sm:gap-6">
+                  <a
+                    href="https://buttondown.com/shannonmchargsongs"
+                    tabIndex={0}
+                    className="flex flex-col items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg"
+                    aria-label="Subscribe to Shannon's newsletter"
+                    role="link"
+                  >
+                    <div className="p-2 sm:p-3 rounded-full bg-accent/30 hover:bg-accent transition-all duration-300 group-hover:scale-110">
+                      <Newspaper className="w-6 h-6 text-foreground group-hover:scale-110 transition-transform duration-300" />
+                    </div>
+                    <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">Newsletter</span>
+                  </a>
+                  <a
+                    href="https://www.instagram.com/shannonmchargsongs/"
+                    tabIndex={0}
+                    className="flex flex-col items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg"
+                    aria-label="Follow Shannon on Instagram"
+                    role="link"
+                  >
+                    <div className="p-2 sm:p-3 rounded-full bg-accent/30 hover:bg-accent transition-all duration-300 group-hover:scale-110">
+                      <img
+                        src="https://api.builder.io/api/v1/image/assets/TEMP/de92c4b0cf657c343fd805205fc6bc6a90761783?placeholderIfAbsent=true"
+                        alt=""
+                        className="w-6 h-6 object-contain group-hover:scale-110 transition-transform duration-300"
+                        role="presentation"
+                      />
+                    </div>
+                    <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">Instagram</span>
+                  </a>
+                  <a
+                    href="https://www.tiktok.com/@shannonmchargsongs"
+                    tabIndex={0}
+                    className="flex flex-col items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg"
+                    aria-label="Follow Shannon on TikTok"
+                    role="link"
+                  >
+                    <div className="p-2 sm:p-3 rounded-full bg-accent/30 hover:bg-accent transition-all duration-300 group-hover:scale-110">
+                      <img
+                        src="https://api.builder.io/api/v1/image/assets/TEMP/7c7882428c644b092335250bd4a53dfd25e3453a?placeholderIfAbsent=true"
+                        alt=""
+                        className="w-6 h-6 object-contain group-hover:scale-110 transition-transform duration-300"
+                        role="presentation"
+                      />
+                    </div>
+                    <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">TikTok</span>
+                  </a>
+                  <a
+                    href="https://www.youtube.com/@shannonmchargsongs"
+                    tabIndex={0}
+                    className="flex flex-col items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg"
+                    aria-label="Follow Shannon on YouTube"
+                    role="link"
+                  >
+                    <div className="p-2 sm:p-3 rounded-full bg-accent/30 hover:bg-accent transition-all duration-300 group-hover:scale-110">
+                      <img
+                        src={youtubeLogo}
+                        alt=""
+                        className="w-6 h-6 object-contain group-hover:scale-110 transition-transform duration-300"
+                        role="presentation"
+                      />
+                    </div>
+                    <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">YouTube</span>
+                  </a>
+                  <a
+                    href="https://bsky.app/profile/shannonmchargsongs.bsky.social"
+                    tabIndex={0}
+                    className="flex flex-col items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg"
+                    aria-label="Follow Shannon on Bluesky"
+                    role="link"
+                  >
+                    <div className="p-2 sm:p-3 rounded-full bg-accent/30 hover:bg-accent transition-all duration-300 group-hover:scale-110">
+                      <img
+                        src="https://api.builder.io/api/v1/image/assets/TEMP/a21a4a86570f9f064e8dd8b720171af437391f9c?placeholderIfAbsent=true"
+                        alt=""
+                        className="w-7 h-6 object-contain group-hover:scale-110 transition-transform duration-300"
+                        role="presentation"
+                      />
+                    </div>
+                    <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">Bluesky</span>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/shannonmchargsongs"
+                    tabIndex={0}
+                    className="flex flex-col items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg"
+                    aria-label="Follow Shannon on Facebook"
+                    role="link"
+                  >
+                    <div className="p-2 sm:p-3 rounded-full bg-accent/30 hover:bg-accent transition-all duration-300 group-hover:scale-110">
+                      <img
+                        src="https://api.builder.io/api/v1/image/assets/TEMP/f38b20d9602b2855e512dd211e924120bf18c9ef?placeholderIfAbsent=true"
+                        alt=""
+                        className="w-[25px] h-[25px] object-contain group-hover:scale-110 transition-transform duration-300"
+                        role="presentation"
+                      />
+                    </div>
+                    <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">Facebook</span>
+                  </a>
+                  <a
+                    href="mailto:shannonmchargsongwriter@gmail.com"
+                    tabIndex={0}
+                    className="flex flex-col items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg"
+                    aria-label="Email Shannon"
+                    role="link"
+                  >
+                    <div className="p-2 sm:p-3 rounded-full bg-accent/30 hover:bg-accent transition-all duration-300 group-hover:scale-110">
+                      <Mail className="w-6 h-6 text-foreground group-hover:scale-110 transition-transform duration-300" />
+                    </div>
+                    <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">Email Me</span>
+                  </a>
+                </div>
+              </nav>
             </CardContent>
           </Card>
         </div>
