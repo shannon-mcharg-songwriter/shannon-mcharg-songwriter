@@ -116,6 +116,19 @@ export const Releases: React.FC = () => {
               </iframe>
               <div className="flex flex-col gap-2 mt-3">
                 <a
+                  href="https://www.musixmatch.com/album/Shannon-McHarg-8/Consumed"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline"
+                >
+                  <img
+                    src={musixmatchLogo}
+                    alt="Musixmatch logo"
+                    className="w-6 h-6 object-contain brightness-0"
+                  />
+                  <span className="text-foreground text-sm font-medium">Consumed lyrics</span>
+                </a>
+                <a
                   href="https://www.youtube.com/playlist?list=PLgEDGGuOvK-nok7dkRCoQn04F7TzMd9fA"
                   target="_blank"
                   rel="noopener noreferrer"
