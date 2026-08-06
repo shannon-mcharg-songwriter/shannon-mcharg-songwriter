@@ -292,7 +292,7 @@ export const Releases: React.FC = () => {
             </CardContent>
           </Card>
 
-          <Card className="border border-border shadow-sm">
+          <Card className="shadow-sm">
             <CardContent className="p-6">
               <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">Holidaze Pie</h3>
               <iframe
