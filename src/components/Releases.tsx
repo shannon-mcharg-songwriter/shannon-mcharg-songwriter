@@ -217,7 +217,7 @@ export const Releases: React.FC = () => {
               <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">False Choices</h3>
               <iframe
                 data-testid="embed-iframe"
-                style={{ border: 0, width: '100%', height: '352px' }}
+                style={{ border: 0, width: '100%', height: '452px' }}
                 src="https://open.spotify.com/embed/album/148X2H2K9zz1p237Oj9FiH?utm_source=generator"
                 loading="lazy"
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
