@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
           className="w-12 h-12 object-contain"
         />
         <p className="text-muted-foreground text-xs sm:text-sm font-medium">
-          © 2025 Shannon McHarg. All rights reserved.
+          © 2026 Shannon McHarg. All rights reserved.
         </p>
       </div>
     </footer>
