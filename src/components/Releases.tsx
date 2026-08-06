@@ -148,6 +148,21 @@ export const Releases: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-0">
           <Card className="border border-border shadow-sm">
             <CardContent className="p-6">
+              <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">Uncoupled</h3>
+              <iframe
+                data-testid="embed-iframe"
+                style={{ border: 0, width: '100%', height: '352px' }}
+                src="https://open.spotify.com/embed/album/50jJbctL66mNarb8nWaIr1?utm_source=generator"
+                loading="lazy"
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                title="Uncoupled by Shannon McHarg on Spotify"
+              >
+                <a href="https://open.spotify.com/album/50jJbctL66mNarb8nWaIr1">Uncoupled by Shannon McHarg</a>
+              </iframe>
+            </CardContent>
+          </Card>
+          <Card className="border border-border shadow-sm">
+            <CardContent className="p-6">
               <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">Consumed</h3>
               <iframe
                 data-testid="embed-iframe"
