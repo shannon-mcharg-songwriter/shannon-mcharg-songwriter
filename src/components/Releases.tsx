@@ -87,12 +87,6 @@ export const Releases: React.FC = () => {
 
   const connectLinks = [
     {
-      href: "https://buttondown.com/shannonmchargsongs",
-      label: "Newsletter",
-      icon: <Newspaper className="w-full h-full text-foreground" />,
-      ariaLabel: "Subscribe to Shannon's newsletter"
-    },
-    {
       href: "https://www.instagram.com/shannonmchargsongs/",
       label: "Instagram",
       icon: <img src="https://api.builder.io/api/v1/image/assets/TEMP/de92c4b0cf657c343fd805205fc6bc6a90761783?placeholderIfAbsent=true" alt="" className="w-full h-full object-contain" role="presentation" />,
@@ -121,6 +115,12 @@ export const Releases: React.FC = () => {
       label: "Facebook",
       icon: <img src="https://api.builder.io/api/v1/image/assets/TEMP/f38b20d9602b2855e512dd211e924120bf18c9ef?placeholderIfAbsent=true" alt="" className="w-full h-full object-contain" role="presentation" />,
       ariaLabel: "Follow Shannon on Facebook"
+    },
+    {
+      href: "https://buttondown.com/shannonmchargsongs",
+      label: "Newsletter",
+      icon: <Newspaper className="w-full h-full text-foreground" />,
+      ariaLabel: "Subscribe to Shannon's newsletter"
     },
     {
       href: "mailto:shannonmchargsongwriter@gmail.com",
