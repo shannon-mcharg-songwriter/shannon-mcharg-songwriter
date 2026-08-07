@@ -433,7 +433,7 @@ export const Releases: React.FC = () => {
 
           <Card className="shadow-sm md:col-span-2 lg:col-span-3">
             <CardContent className="p-6">
-              <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">Connect with Me</h3>
+              <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">Social Media</h3>
               <nav aria-label="Social media links">
                 <div className="flex flex-wrap items-center justify-start gap-6 sm:gap-8">
                   {connectLinks.map((link, index) => (
