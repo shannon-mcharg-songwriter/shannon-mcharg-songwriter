@@ -87,12 +87,6 @@ export const Releases: React.FC = () => {
 
   const connectLinks = [
     {
-      href: "https://buttondown.com/shannonmchargsongs",
-      label: "Newsletter",
-      icon: <Newspaper className="w-full h-full text-foreground" />,
-      ariaLabel: "Subscribe to Shannon's newsletter"
-    },
-    {
       href: "https://www.instagram.com/shannonmchargsongs/",
       label: "Instagram",
       icon: <img src="https://api.builder.io/api/v1/image/assets/TEMP/de92c4b0cf657c343fd805205fc6bc6a90761783?placeholderIfAbsent=true" alt="" className="w-full h-full object-contain" role="presentation" />,
@@ -121,6 +115,12 @@ export const Releases: React.FC = () => {
       label: "Facebook",
       icon: <img src="https://api.builder.io/api/v1/image/assets/TEMP/f38b20d9602b2855e512dd211e924120bf18c9ef?placeholderIfAbsent=true" alt="" className="w-full h-full object-contain" role="presentation" />,
       ariaLabel: "Follow Shannon on Facebook"
+    },
+    {
+      href: "https://buttondown.com/shannonmchargsongs",
+      label: "Newsletter",
+      icon: <Newspaper className="w-full h-full text-foreground" />,
+      ariaLabel: "Subscribe to Shannon's newsletter"
     },
     {
       href: "mailto:shannonmchargsongwriter@gmail.com",
@@ -160,6 +160,19 @@ export const Releases: React.FC = () => {
                 <a href="https://open.spotify.com/album/50jJbctL66mNarb8nWaIr1">Uncoupled by Shannon McHarg</a>
               </iframe>
               <div className="flex flex-col gap-2 mt-3">
+                <a
+                  href="https://www.musixmatch.com/album/Shannon-McHarg-9/Uncoupled"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:opacity-80 transition-opacity underline"
+                >
+                  <img
+                    src={musixmatchLogo}
+                    alt="Musixmatch logo"
+                    className="w-6 h-6 object-contain brightness-0"
+                  />
+                  <span className="text-foreground text-sm font-medium">Uncoupled lyrics</span>
+                </a>
                 <a
                   href="https://www.youtube.com/watch?v=0oscu1_MgFk&list=PLGdgwLoxFZ_Y"
                   target="_blank"
@@ -372,52 +385,37 @@ export const Releases: React.FC = () => {
             </CardContent>
           </Card>
 
-          <Card className="shadow-sm">
+          <Card className="shadow-sm md:col-span-2 lg:col-span-3">
             <CardContent className="p-6">
-              <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">Stream my Music</h3>
-              <p className="text-foreground text-sm mb-6">
-                My artist page on your favorite streaming platforms.
-              </p>
+              <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">Streaming Platforms</h3>
               
-              <div className="flex flex-col gap-3 mb-4">
-                {availableNowPlatforms.map((platform, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <div className="relative aspect-square w-6 h-6 bg-transparent flex-shrink-0">
-                      <img
-                        src={platform.src}
-                        alt={platform.alt}
-                        className="w-full h-full object-contain bg-transparent"
-                        style={{ backgroundColor: 'transparent' }}
-                      />
-                    </div>
-                    <span className="text-sm text-foreground">
-                      <a
-                        href={platform.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline hover:opacity-80 transition-opacity"
-                      >
-                        {platform.name}
-                      </a>
-                      {platform.holidayHref && (
-                        <>
-                          {' '}
-                          <a
-                            href={platform.holidayHref}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="underline hover:opacity-80 transition-opacity"
-                          >
-                            (Holiday)
-                          </a>
-                        </>
-                      )}
-                    </span>
-                  </div>
-                ))}
-              </div>
+              
+              <nav aria-label="Streaming platform links">
+                <div className="flex flex-wrap items-center justify-start gap-6 sm:gap-8">
+                  {availableNowPlatforms.map((platform, index) => (
+                    <a
+                      key={index}
+                      href={platform.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Listen to Shannon on ${platform.name}`}
+                      className="flex flex-col items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg"
+                    >
+                      <div className="p-2 sm:p-3 rounded-full bg-accent/30 hover:bg-accent transition-all duration-300 group-hover:scale-110">
+                        <img
+                          src={platform.src}
+                          alt=""
+                          className="w-6 h-6 object-contain group-hover:scale-110 transition-transform duration-300"
+                          role="presentation"
+                        />
+                      </div>
+                      <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">{platform.name}</span>
+                    </a>
+                  ))}
+                </div>
+              </nav>
 
-              <p className="text-foreground text-xs">
+              <p className="text-foreground text-xs mt-6">
                 Don't see your favorite platform?{' '}
                 <a 
                   href="https://cdbaby.com/music-distribution/digital-distribution-partners/"
@@ -431,11 +429,11 @@ export const Releases: React.FC = () => {
             </CardContent>
           </Card>
 
-          <Card className="shadow-sm">
+          <Card className="shadow-sm md:col-span-2 lg:col-span-3">
             <CardContent className="p-6">
-              <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">Connect with Me</h3>
+              <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">Social Media & Contact</h3>
               <nav aria-label="Social media links">
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-wrap items-center justify-start gap-6 sm:gap-8">
                   {connectLinks.map((link, index) => (
                     <a
                       key={index}
@@ -443,12 +441,14 @@ export const Releases: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={link.ariaLabel}
-                      className="flex items-center gap-3 underline hover:opacity-80 transition-opacity"
+                      className="flex flex-col items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg"
                     >
-                      <div className="relative aspect-square w-6 h-6 bg-transparent flex-shrink-0">
-                        {link.icon}
+                      <div className="p-2 sm:p-3 rounded-full bg-accent/30 hover:bg-accent transition-all duration-300 group-hover:scale-110">
+                        <div className="w-6 h-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          {link.icon}
+                        </div>
                       </div>
-                      <span className="text-sm text-foreground">{link.label}</span>
+                      <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">{link.label}</span>
                     </a>
                   ))}
                 </div>
