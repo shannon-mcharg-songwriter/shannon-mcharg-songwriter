@@ -431,11 +431,11 @@ export const Releases: React.FC = () => {
             </CardContent>
           </Card>
 
-          <Card className="shadow-sm">
+          <Card className="shadow-sm md:col-span-2 lg:col-span-3">
             <CardContent className="p-6">
               <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">Connect with Me</h3>
               <nav aria-label="Social media links">
-                <div className="flex flex-col gap-3">
+                <div className="flex flex-wrap items-center justify-start gap-6 sm:gap-8">
                   {connectLinks.map((link, index) => (
                     <a
                       key={index}
@@ -443,12 +443,14 @@ export const Releases: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={link.ariaLabel}
-                      className="flex items-center gap-3 underline hover:opacity-80 transition-opacity"
+                      className="flex flex-col items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg"
                     >
-                      <div className="relative aspect-square w-6 h-6 bg-transparent flex-shrink-0">
-                        {link.icon}
+                      <div className="p-2 sm:p-3 rounded-full bg-accent/30 hover:bg-accent transition-all duration-300 group-hover:scale-110">
+                        <div className="w-6 h-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          {link.icon}
+                        </div>
                       </div>
-                      <span className="text-sm text-foreground">{link.label}</span>
+                      <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">{link.label}</span>
                     </a>
                   ))}
                 </div>
