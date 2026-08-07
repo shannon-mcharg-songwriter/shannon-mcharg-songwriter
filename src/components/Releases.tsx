@@ -385,52 +385,39 @@ export const Releases: React.FC = () => {
             </CardContent>
           </Card>
 
-          <Card className="shadow-sm">
+          <Card className="shadow-sm md:col-span-2 lg:col-span-3">
             <CardContent className="p-6">
               <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">Stream my Music</h3>
               <p className="text-foreground text-sm mb-6">
                 My artist page on your favorite streaming platforms.
               </p>
               
-              <div className="flex flex-col gap-3 mb-4">
-                {availableNowPlatforms.map((platform, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <div className="relative aspect-square w-6 h-6 bg-transparent flex-shrink-0">
-                      <img
-                        src={platform.src}
-                        alt={platform.alt}
-                        className="w-full h-full object-contain bg-transparent"
-                        style={{ backgroundColor: 'transparent' }}
-                      />
-                    </div>
-                    <span className="text-sm text-foreground">
-                      <a
-                        href={platform.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="underline hover:opacity-80 transition-opacity"
-                      >
-                        {platform.name}
-                      </a>
-                      {platform.holidayHref && (
-                        <>
-                          {' '}
-                          <a
-                            href={platform.holidayHref}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="underline hover:opacity-80 transition-opacity"
-                          >
-                            (Holiday)
-                          </a>
-                        </>
-                      )}
-                    </span>
-                  </div>
-                ))}
-              </div>
+              <nav aria-label="Streaming platform links">
+                <div className="flex flex-wrap items-center justify-start gap-6 sm:gap-8">
+                  {availableNowPlatforms.map((platform, index) => (
+                    <a
+                      key={index}
+                      href={platform.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Listen to Shannon on ${platform.name}`}
+                      className="flex flex-col items-center gap-2 group focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-lg"
+                    >
+                      <div className="p-2 sm:p-3 rounded-full bg-accent/30 hover:bg-accent transition-all duration-300 group-hover:scale-110">
+                        <img
+                          src={platform.src}
+                          alt=""
+                          className="w-6 h-6 object-contain group-hover:scale-110 transition-transform duration-300"
+                          role="presentation"
+                        />
+                      </div>
+                      <span className="text-xs text-muted-foreground group-hover:text-foreground transition-colors">{platform.name}</span>
+                    </a>
+                  ))}
+                </div>
+              </nav>
 
-              <p className="text-foreground text-xs">
+              <p className="text-foreground text-xs mt-6">
                 Don't see your favorite platform?{' '}
                 <a 
                   href="https://cdbaby.com/music-distribution/digital-distribution-partners/"
