@@ -388,9 +388,7 @@ export const Releases: React.FC = () => {
           <Card className="shadow-sm md:col-span-2 lg:col-span-3">
             <CardContent className="p-6">
               <h3 className="text-secondary text-xl sm:text-2xl font-semibold mb-4 text-left">Streaming Platforms</h3>
-              <p className="text-foreground text-sm mb-6">
-                My artist page on your favorite streaming platforms.
-              </p>
+              
               
               <nav aria-label="Streaming platform links">
                 <div className="flex flex-wrap items-center justify-start gap-6 sm:gap-8">
