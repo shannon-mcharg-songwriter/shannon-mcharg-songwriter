@@ -7,17 +7,17 @@ import { supabase } from '@/integrations/supabase/client';
 const ARCHIVE_URL = 'https://buttondown.com/shannonmchargsongs/archive/';
 
 export const Newsletter: React.FC = () => {
-  const [embedUrl, setEmbedUrl] = useState<string>(ARCHIVE_URL);
+  const [embedUrl, setEmbedUrl] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
     supabase.functions
       .invoke('latest-newsletter')
       .then(({ data }) => {
-        if (!cancelled && data?.url) setEmbedUrl(data.url);
+        if (!cancelled) setEmbedUrl(data?.url || ARCHIVE_URL);
       })
       .catch(() => {
-        // Keep the archive list as a safe fallback.
+        if (!cancelled) setEmbedUrl(ARCHIVE_URL);
       });
     return () => {
       cancelled = true;
@@ -40,12 +40,17 @@ export const Newsletter: React.FC = () => {
         </h2>
 
         <div>
-          <iframe
-            src={embedUrl}
-            title="Shannon McHarg newsletter"
-            className="w-full h-[600px] border-0 bg-background"
-            loading="lazy"
-          />
+          {/* Render only once the URL is known so Buttondown counts one view per visit. */}
+          {embedUrl ? (
+            <iframe
+              src={embedUrl}
+              title="Shannon McHarg newsletter"
+              className="w-full h-[600px] border-0 bg-background"
+              loading="lazy"
+            />
+          ) : (
+            <div className="w-full h-[600px] bg-background" aria-hidden="true" />
+          )}
           <a
             href={ARCHIVE_URL}
             target="_blank"
